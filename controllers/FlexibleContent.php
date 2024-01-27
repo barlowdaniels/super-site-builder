@@ -1,5 +1,7 @@
 <?php
 
+// TODO: Add comments to explain the functions below
+
 namespace SDSS;
 
 use SDSS\Helpers;
@@ -42,6 +44,7 @@ class FlexibleContent
         return include $filename;
     }
     
+    //TODO: Rework this function for inclusion of templates from the theme by default - the commented lines below don't work to achieve this
     private function getTemplateFile($filename) {
 //        $themeTemplate = get_stylesheet_directory() . '/super-site/templates/blocks/' . $filename . '.php';
 //        if(!file_exists($themeTemplate)) {
