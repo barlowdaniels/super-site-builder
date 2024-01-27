@@ -1,0 +1,30 @@
+.image {
+  &.overlay {
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+    &.overlay-black-1:before {
+      background: $display_colours_black;
+      opacity: .33;
+    }
+    &.overlay-white-1:before {
+      background: $display_colours_white;
+      opacity: .33;
+    }
+    &.overlay-primary-1:before {
+      background: $display_colours_primary;
+      opacity: .5;
+    }
+    &.overlay-secondary-1:before {
+      background: $display_colours_secondary;
+      opacity: .5;
+    }
+    &.overlay-tertiary-1:before {
+      background: $display_colours_tertiary;
+      opacity: .5;
+    }
+  }
+}

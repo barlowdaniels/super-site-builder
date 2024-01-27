@@ -1,0 +1,26 @@
+.font {
+  &-primary, 
+  &-primary * {
+    color: $display_colours_primary!important;
+  }
+  &-secondary, 
+  &-secondary * {
+    color: $display_colours_secondary!important;
+  }
+  &-tertiary, 
+  &-tertiary * {
+    color: $display_colours_tertiary!important;
+  }
+  &-black, 
+  &-black * {
+    color: $display_colours_black!important;
+  }
+  &-white, 
+  &-white * {
+    color: $display_colours_white!important;
+  }
+  &-light-grey, 
+  &-light-grey * {
+    color: $display_colours_light_grey!important;
+  }
+}

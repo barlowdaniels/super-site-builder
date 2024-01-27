@@ -1,0 +1,40 @@
+.block-content {
+  &.fc-center {
+    text-align: center!important;
+    .block-heading {
+      text-align: center;
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  &.fc-right {
+    text-align: right!important;
+    .block-heading {
+      &:before {
+        right: 0;
+      }
+    }
+  }
+
+  &.fc-three-quarter {
+    max-width: 75%!important;
+    margin: 0 auto;
+  }
+  &.fc-half {
+    max-width: 66.666%!important;
+    margin: 0 auto;
+  }
+
+  @include media-lg-up {
+    &.fc-three-quarter {
+      max-width: 66.666%!important;
+      margin: 0 auto;
+    }
+    &.fc-half {
+      max-width: 50%!important;
+      margin: 0 auto;
+    }
+  }
+}

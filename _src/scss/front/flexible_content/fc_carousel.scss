@@ -1,0 +1,43 @@
+.carousel_block {
+  .carousel {
+    // Style: Logos
+    &.images {
+      .image {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    // Style: Testimonial
+    &.testimonials {
+      .testimonial {
+        text-align: center;
+        .testimonial-content {
+          p {
+            color: $display_colours_primary;
+            font-size: 1.15rem;
+          }
+        }
+        .testimonial-by {
+          color: $display_colours_primary;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  // Block background overrides
+  &.block_bg_secondary {
+    .carousel {
+      &.testimonials {
+        .testimonial {
+          .testimonial-content p, 
+          .testimonial-by {
+            color: $display_colours_white;
+          }
+        }
+      }
+    }
+  }
+}

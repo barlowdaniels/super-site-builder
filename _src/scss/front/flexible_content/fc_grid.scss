@@ -1,0 +1,194 @@
+.grid_block {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .block-content > .row {
+    justify-content: center;
+  }
+  // Style: Default
+  .default {
+    .block-wrapper {
+      margin-bottom: 60px;
+      .grid-link {
+        display: block;
+      }
+      .image {
+        height: 300px;
+        background-size: 66.666%;
+        background-color: $display_colours_light_grey;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 30px;
+      }        
+      .title {
+        color: $display_colours_primary;
+      }
+      p {
+        color: $display_colours_black;
+        &:last-of-type {
+          margin-bottom: 30px;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &.link {
+        @include transitionOne;
+        &:hover {
+          margin-top: -3px;
+          margin-bottom: 63px;
+        }
+      }
+    }
+    @include media-xl-up {
+      .block-wrapper {
+        .image {
+          height: 400px;
+        }
+      }
+    }
+  }
+  // Style: Icon Links
+  .icon-links {
+    .gradient-border-wrapper {
+      box-shadow: 0px 0px 10px 0px rgba($display_colours_primary, .4);
+      .icon-link {
+        display: block;
+        text-align: center;
+        padding: 50px 15px;
+        img {
+          height: 70px;
+          width: auto;
+          display: block;
+          margin: 0 auto 15px auto;
+        }
+        a {
+          display: inline-block;
+          font-weight: 600;
+          color: $display_colours_black;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  // Style: Image Links - Simple
+  .image-links {
+    .col {
+      .block-wrapper {
+        .image-link {
+          margin-bottom: 60px;
+          display: inline-block;
+          text-align: center;
+          box-shadow: 0px 0px 5px 0px rgba($display_colours_secondary, 0);
+          padding: 30px;
+          border-radius: 15px;
+          @include transitionOne;
+          img {
+            max-width: 200px;
+            margin-bottom: 15px;
+          }
+          .text {
+            color: $display_colours_black;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 1.3;
+          }
+          &:hover {
+            box-shadow: 0px 0px 10px 0px rgba($display_colours_secondary, .4);
+          }
+        }
+      }
+    }
+    // Style: Image Links - Detailed
+    &.detailed {
+      .block-wrapper {
+        height: calc(100% - 30px);
+        .image-link {
+          height: 100%;
+          .logo-title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+            .text {
+              font-size: 2rem;
+            }
+            img {
+              margin-bottom: 0;
+              margin-right: 15px;
+            }
+          }
+          .description {
+            color: $display_colours_black;
+            margin-bottom: 0;
+            max-width: 90%;
+          }
+          &:hover {
+            .description {
+              color: $display_colours_black;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Style: Logos
+  .logos {
+    margin-bottom: -30px;
+    .col {
+      flex: 0 0 20%;
+      max-width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      img {
+        height: auto;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+  // Block colour overrides
+  &.block_bg_primary {
+    .default {
+      .block-wrapper {
+        h3 {
+          color: $display_colours_white;
+        }
+        p {
+          color: $display_colours_secondary;
+        }
+      }
+    }
+    .image-links {
+      .image-link {
+        .text {
+          background: $display_colours_white;
+        }
+      }
+    }
+  }
+  &.block_bg_secondary {
+    .default {
+      .block-wrapper {
+        p {
+          color: $display_colours_white;
+        }
+      }
+    }
+    .image-links {
+      .image-link {
+        .text {
+          span {
+            &:last-of-type {
+              background: $display_colours_white;
+              color: $display_colours_secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

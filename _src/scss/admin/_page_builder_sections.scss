@@ -1,0 +1,34 @@
+.acf-field {
+  .acf-label {
+    label {
+      font-size: .8rem!important;
+    }
+  }
+  &[data-name="section_name"] {
+    .acf-label, 
+    .acf-label label {
+      display: none!important;
+    }
+    .acf-input {
+      flex-grow: 1!important;
+      padding: 0!important;
+      input {
+        border: 0!important;
+        background: transparent!important;
+        font-size: 1rem!important;
+        padding: 10px 15px!important;
+        &::placeholder {
+          content: 'This';
+        }
+      }
+    }
+  }
+}
+
+.acf-field[data-name="section_name"],
+.acf-row.-collapsed > .acf-fields > .acf-field.-collapsed-target[data-name="section_name"] {
+  display: flex!important;
+  align-items: center!important;
+  background: #F9F9F9!important;
+  padding: 0!important;
+}

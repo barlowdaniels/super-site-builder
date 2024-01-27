@@ -1,0 +1,30 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	.page-numbers {
+		height: 45px;
+		width: 45px;
+		background: $display_colours_light_grey;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 3px;
+		color: $display_colours_secondary;
+		font-family: $display_fonts_fonts_body_font_family;
+		font-size: 1rem;
+		font-weight: 600;
+		border-radius: 50%;
+		@include transitionOne;
+		&:hover {
+			background: $display_colours_secondary;
+			color: $display_colours_white;
+			text-decoration: none;
+		}
+		&.current {
+			background: $display_colours_primary;
+			color: $display_colours_secondary;
+			font-weight: 600;
+		}
+	}
+}

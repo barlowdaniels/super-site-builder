@@ -1,0 +1,46 @@
+.cta_block {
+  // Style: Default
+  .default {}
+  // Style: Card & Image
+  .card-image {
+    position: relative;
+    .card {
+      .gradient-border-content {
+        padding: 50px 30px;
+      }
+      h4 {
+        color: $display_colours_secondary;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+      .theme-btn {
+        margin-top: 50px;
+      }
+    }
+    .image {
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      img {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+      .dot {
+        position: absolute;
+        height: 85px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: $display_colours_secondary;
+        left: 8%;
+        bottom: 8%;
+      }
+    }
+  }
+}
+.cta-spacer {
+  width: 100%;
+  padding: 50px 15px;
+}

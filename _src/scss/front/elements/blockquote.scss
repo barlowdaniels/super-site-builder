@@ -1,0 +1,28 @@
+blockquote {
+  font-family: $display_fonts_fonts_heading_font_family;
+  font-size: 1rem;
+  background: $display_colours_light_grey;
+  padding: 40px 40px 35px 40px;
+  border-radius: 10px;
+  margin: 30px 0;
+  position: relative;
+  &:before, &:after {
+    content: '"';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -10px;
+  }
+  &:before {
+    left: -10px;
+  }
+  &:after {
+    right: -10px;
+  }
+  *:last-of-type {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.block_bg_white {
+  background: $display_colours_white;
+}
+.block_bg_light-grey {
+  background: $display_colours_light_grey;
+}
+.block_bg_primary {
+  background: $display_colours_primary;
+}
+.block_bg_secondary {
+  background: $display_colours_secondary;
+  color: $display_colours_white!important;
+}
+
+.block_bg_tertiary {
+  background: $display_colours_tertiary;
+  color: $display_colours_white!important;
+}

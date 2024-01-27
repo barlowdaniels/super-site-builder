@@ -1,0 +1,45 @@
+.forminator-custom-form {
+  input, 
+  textarea, 
+  span.select > span {
+    padding: 15px!important;
+    border-radius: 10px!important;
+  }
+  label {
+    font-size: 1rem!important;
+    margin-bottom: 5px!important;
+    text-align: left!important;
+    font-weight: 600!important;
+  }
+  .forminator-button-submit {
+    padding: 10px 30px!important;
+    display: inline-block!important;
+    font-size: 1.1rem!important;
+    font-family: $display_fonts_fonts_heading_font_family!important;
+    letter-spacing: .5px!important;
+    border: 2px solid transparent!important;
+    cursor: pointer!important;
+    text-align: center!important;
+    text-decoration: none!important;
+    background: transparent!important;
+    border-radius: 30px!important;
+    font-weight: 600!important;
+    background: $display_colours_secondary!important;
+    color: $display_colours_primary!important;
+    @include transitionOne;
+    &:hover,
+    &:focus {
+      background: transparent!important;
+      border-color: $display_colours_primary!important;
+      color: $display_colours_primary!important;
+      box-shadow: none!important;
+    }
+  }
+  .forminator-error-message {
+    font-size: .9rem!important;
+    text-align: left!important;
+    padding: 10px 15px!important;
+    line-height: 1.5!important;
+    border-radius: 10px!important;
+  }
+}

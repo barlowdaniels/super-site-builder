@@ -1,0 +1,40 @@
+.wysiwyg_block {
+	.block-content {
+		p {
+			font-size: calculator($display_fonts_body_base_font_size * 1.1);
+			line-height: 1.8;
+			a {
+				color: $display_colours_secondary;
+				font-weight: 600;
+				&:hover {
+					color: $display_colours_primary;
+				}
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.block-buttons {
+		margin-top: 30px;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.block_bg_secondary {
+		p {
+			a {
+				color: $display_colours_primary;
+			}
+		}
+	}
+	&.block_bg_primary {
+		p {
+			a:hover {
+				color: $display_colours_white;
+			}
+		}
+	}
+}

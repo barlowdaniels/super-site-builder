@@ -1,0 +1,52 @@
+.key_point_block {
+  .block-content {
+    padding-top: 50px;
+    .circle {
+      .block-wrapper {
+        position: relative;
+        z-index: 1;
+        .key-point {
+          font-size: 6rem;
+          line-height: 1.2;
+          margin: 50px 0;
+          max-width: 75%;
+        }
+      }
+      .circle-bg {
+        position: absolute;
+        width: 120%;
+        aspect-ratio: 1;
+        background: $display_colours_white;
+        border-radius: 50%;
+        left: -33%;
+        top: -50px;
+        z-index: 0;
+      }
+    }
+    .stats {
+      .block-wrapper {
+        max-width: 75%;
+        float: right;
+        .stat {
+          margin-bottom: 50px;
+          .main {
+            font-size: 12rem;
+            font-weight: 900;
+            line-height: 1;
+          }
+          .sub {
+            font-size: 1.2rem;
+            &.big {
+              font-size: 4rem;
+              line-height: 1;
+            }
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

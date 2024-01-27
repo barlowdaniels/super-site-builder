@@ -1,0 +1,85 @@
+html {
+	scroll-behavior: smooth;
+	body {
+		font-family: $display_fonts_fonts_body_font_family;
+		color: $display_colours_black;
+		overflow-x: hidden;
+		.page-content-wrapper {
+			overflow-x: hidden;
+		}
+		.row {
+			flex-grow: 1;
+		}
+		.block-wrapper {
+			display: block;
+			width: 100%;
+			position: relative;
+		}
+		.flex-wrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		&.no-scroll {
+			overflow: hidden;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	font-family: $display_fonts_fonts_heading_font_family;
+	margin-bottom: 1rem;
+	color: $display_colours_primary;
+	&.text-thin {
+		font-weight: 400;
+	}
+}
+
+h1 {
+	font-size: $display_fonts_headings_h1;
+}
+h2 {
+	font-size: $display_fonts_headings_h2;
+}
+h3 {
+	font-size: $display_fonts_headings_h3;
+}
+h4 {
+	font-size: $display_fonts_headings_h4;
+}
+h5 {
+	font-size: $display_fonts_headings_h5;
+}
+h6 {
+	font-size: $display_fonts_headings_h6;
+}
+
+a {
+	font-family: $display_fonts_fonts_heading_font_family;
+	line-height: 1.5;
+	margin-bottom: 0;
+	color: $display_colours_primary;
+	font-weight: 400;
+	&:hover {
+		text-decoration: none;
+		color: $display_colours_tertiary;
+	}
+}
+
+p, ul, ol {
+	font-size: calculator($display_fonts_body_base_font_size * 1.1);
+	line-height: 1.5;
+}
+ul, ol {
+    padding-left: 20px;
+}
+p {
+	a {
+		font-family: $display_fonts_fonts_body_font_family;
+	}
+}
+
+:focus {
+	outline: none!important;
+}

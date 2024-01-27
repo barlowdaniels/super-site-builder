@@ -1,0 +1,43 @@
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	a {					
+		margin: 0 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		&:first-of-type {
+			margin-left: 0;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+		&.facebook {
+			background: #3B5998;
+		}
+		&.youtube {
+			background: #FF0000;
+		}
+		&.twitter {
+			background: #03A9F4;
+		}
+		&.instagram {
+			background: rgb(254,189,39);
+			background: linear-gradient(45deg, rgba(254,189,39,1) 25%, rgba(149,2,215,1) 75%);
+		}
+		&.linkedin {
+			background: #007AB9;
+		}
+		&:hover {
+			background: $display_colours_primary;
+		}
+		i, svg {
+			color: $display_colours_white;
+			font-size: 1.4rem;
+		}
+	}
+}
