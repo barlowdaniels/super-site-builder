@@ -10,16 +10,16 @@ if($vimeoId) {
             <div class="vimeo-player" id="player<?= $uniqueId;?>"></div>
             <div class="vimeo-controls">
                 <div class="play hide" onclick="player<?= $uniqueId;?>.play()">
-                    <?= SDSS\Helpers::getAsset('play.svg'); ?>
+                    <?= \SuperBuilder\Helpers\Helper::getAsset('play.svg'); ?>
                 </div>
                 <div class="pause" onclick="player<?= $uniqueId;?>.pause()">
-                    <?= SDSS\Helpers::getAsset('pause.svg'); ?>
+                    <?= \SuperBuilder\Helpers\Helper::getAsset('pause.svg'); ?>
                 </div>
                 <div class="mute hide" onclick="player<?= $uniqueId;?>.setVolume(0)">
-                    <?= SDSS\Helpers::getAsset('volume-mute.svg'); ?>
+                    <?= \SuperBuilder\Helpers\Helper::getAsset('volume-mute.svg'); ?>
                 </div>
                 <div class="unmute" onclick="player<?= $uniqueId;?>.setVolume(1)">
-                    <?= SDSS\Helpers::getAsset('volume.svg'); ?>
+                    <?= \SuperBuilder\Helpers\Helper::getAsset('volume.svg'); ?>
                 </div>
             </div>
         </div>

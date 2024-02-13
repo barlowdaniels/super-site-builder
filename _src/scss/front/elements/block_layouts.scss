@@ -27,7 +27,7 @@
     margin: 0 auto;
   }
 
-  @include media-lg-up {
+  @include media-breakpoint-up(lg) {
     &.fc-three-quarter {
       max-width: 66.666%!important;
       margin: 0 auto;

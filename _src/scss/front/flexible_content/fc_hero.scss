@@ -135,7 +135,7 @@
         }
     }
     
-    @include media-lg-up {
+    @include media-breakpoint-up(lg) {
         .block-wrapper {
             .block-title {
                 line-height: 1.2;

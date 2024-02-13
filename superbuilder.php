@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Super Site
+Plugin Name: SuperBuilder
 Description: A plugin for building WordPress websites with ACF at superhero speeds.
-Version: 1.0
+Version: 0.0.2
 Author: Super Digital
 */
 
@@ -17,4 +17,6 @@ if (!defined('BASE_URL')) {
 // Autoload composer packages
 require_once 'vendor/autoload.php';
 
-$superSite = new SDSS\SuperSite();
+// Require the plugin loader
+use SuperBuilder\Loader;
+new Loader;

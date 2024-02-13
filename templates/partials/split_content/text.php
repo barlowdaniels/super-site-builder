@@ -2,12 +2,12 @@
 
     <div class="block-wrapper">
 
-        <?php SDSS\Block::blockTitle($fields['title'], $fields['title_settings']); ?>
+        <?php \SuperBuilder\Frontend\FlexibleContentBlock::blockTitle($fields['title'], $fields['title_settings']); ?>
         
         <?= $fields['content']; ?>
         
         <?php if(get_sub_field('buttons')) {
-            echo '<div class="block-buttons">' . SDSS\Block::blockButtons(get_sub_field('buttons')) . '</div>';
+            echo '<div class="block-buttons">' . \SuperBuilder\Frontend\FlexibleContentBlock::blockButtons(get_sub_field('buttons')) . '</div>';
         } ?>
         
     </div>

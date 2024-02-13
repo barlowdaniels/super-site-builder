@@ -1,11 +1,11 @@
 <?php
 
-namespace SDSS;
+namespace SuperBuilder\Frontend;
 
 class ScssCompiler
 {
     
-    public static function init() {
+    public static function classInit() {
         add_action('init', [self::class, 'pluginCompile'], 20);
         add_action('init', [self::class, 'themeCompile'], 30);
     }
@@ -13,7 +13,7 @@ class ScssCompiler
     public static function themeCompile() {
         if ( COMPILE_SCSS == true ) {
             self::updateScss( 'display', get_stylesheet_directory() . '/_src/scss/' );
-             self::updateScss( 'button_settings', get_stylesheet_directory() . '/_src/scss/' );
+            self::updateScss( 'button_settings', get_stylesheet_directory() . '/_src/scss/' );
             self::compileScss(
                 get_stylesheet_directory() . '/',
                 '_src/scss/',

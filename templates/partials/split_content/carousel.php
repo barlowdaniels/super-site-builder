@@ -7,7 +7,7 @@
                         <?= $field['content']; ?>
                     </div>
                     <div class="block-buttons">
-                        <?= SDSS\Block::blockButtons($field['buttons']); ?>
+                        <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockButtons($field['buttons']); ?>
                     </div>
                 </div>
             <?php } ?>

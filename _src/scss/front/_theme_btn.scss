@@ -12,7 +12,7 @@
   background: transparent;
   border-radius: $button_settings_border_radius;
   font-weight: $button_settings_font_weight;
-  @include transitionOne;
+  @include transition(.25s);
 }
 
 @mixin themeBtnSmall {

@@ -8,9 +8,9 @@
                 <div class="col col-12 col-lg-5 card">
                     <div class="block-wrapper gradient-border-wrapper">
                         <div class="gradient-border-content">
-                            <?php SDSS\Helpers::echoIfExists($content['card']['title'], 'h4'); ?>
-                            <?php SDSS\Helpers::echoIfExists($content['card']['sub_text'], 'p'); ?>
-                            <?= SDSS\Block::blockButton($content['card']['button']); ?>
+                            <?php \SuperBuilder\Helpers\Helper::echoIfExists($content['card']['title'], 'h4'); ?>
+                            <?php \SuperBuilder\Helpers\Helper::echoIfExists($content['card']['sub_text'], 'p'); ?>
+                            <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockButton($content['card']['button']); ?>
                         </div>
                     </div>
                 </div>

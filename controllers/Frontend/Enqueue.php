@@ -1,9 +1,9 @@
 <?php
 
-namespace SDSS;
+namespace SuperBuilder\Frontend;
 
 class Enqueue {
-    public static function init() {
+    public static function classInit() {
         add_action('wp_enqueue_scripts', [self::class, 'frontendScripts']);
         add_action('admin_enqueue_scripts', [self::class, 'adminScripts']);
     }

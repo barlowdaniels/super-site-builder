@@ -34,14 +34,14 @@
         text-decoration: none;
       }
       &.link {
-        @include transitionOne;
+        @include transition(.25s);
         &:hover {
           margin-top: -3px;
           margin-bottom: 63px;
         }
       }
     }
-    @include media-xl-up {
+    @include media-breakpoint-up(xl) {
       .block-wrapper {
         .image {
           height: 400px;
@@ -83,7 +83,7 @@
           box-shadow: 0px 0px 5px 0px rgba($display_colours_secondary, 0);
           padding: 30px;
           border-radius: 15px;
-          @include transitionOne;
+          @include transition(.25s);
           img {
             max-width: 200px;
             margin-bottom: 15px;

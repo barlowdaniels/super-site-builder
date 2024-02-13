@@ -17,7 +17,7 @@
   &_5 {
     padding-top: 60px;
   }  
-  @include media-lg-up {
+  @include media-breakpoint-up(lg) {
        &_2 {
          padding-top: 40px;
        }
@@ -51,7 +51,7 @@
   &_5 {
     padding-bottom: 60px;
   }
-  @include media-lg-up {
+  @include media-breakpoint-up(lg) {
     &_2 {
       padding-bottom: 40px;
     }

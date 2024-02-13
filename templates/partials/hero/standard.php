@@ -1,20 +1,18 @@
 <?php
-use SDSS\Block;
-use SDSS\Helpers;
 $content = get_sub_field('hero_content');
 ?>
 <div class="row">
     <div class="col-1"></div>
-    <div class="col-10 block-content <?= SDSS\Block::blockLayout(); ?>">
+    <div class="col-10 block-content <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockLayout(); ?>">
         <div class="block-wrapper">
             <?php 
             // Title
-            SDSS\Block::blockTitle($content['title'], $content['title_settings']);
+            \SuperBuilder\Frontend\FlexibleContentBlock::blockTitle($content['title'], $content['title_settings']);
             // Sub Text
-            SDSS\Helpers::echoIfExists($content[ 'sub_text'], 'div', 'sub-text font-' . $content['sub_text_colour']);
+            \SuperBuilder\Helpers\Helper::echoIfExists($content[ 'sub_text'], 'div', 'sub-text font-' . $content['sub_text_colour']);
             // Buttons
             if( $content['buttons'] ) {
-                echo '<div class="block-buttons">' . SDSS\Block::blockButtons( $content['buttons'] ) . '</div>';
+                echo '<div class="block-buttons">' . \SuperBuilder\Frontend\FlexibleContentBlock::blockButtons( $content['buttons'] ) . '</div>';
             }
             ?>
 

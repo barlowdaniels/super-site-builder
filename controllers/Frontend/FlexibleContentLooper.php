@@ -1,12 +1,10 @@
 <?php
 
-// TODO: Add comments to explain the functions below
+namespace SuperBuilder\Frontend;
 
-namespace SDSS;
+use SuperBuilder\Helpers\Helper;
 
-use SDSS\Helpers;
-
-class FlexibleContent
+class FlexibleContentLooper
 {
     private $sectionIndex;
 
@@ -18,7 +16,7 @@ class FlexibleContent
         if( have_rows('sections', $postID) == false ) return;
         while ( have_rows('sections', $postID) ) : the_row();
             $this->sectionIndex = get_row_index();
-            echo '<section id="' . Helpers::slugify(get_sub_field('section_name')) . '" data-section="' . get_row_index() . '">';
+            echo '<section id="' . Helper::slugify(get_sub_field('section_name')) . '" data-section="' . get_row_index() . '">';
             $this->getFlexibleContent($postID, $this->sectionIndex);
             echo '</section>';
         endwhile;

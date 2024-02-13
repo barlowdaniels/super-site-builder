@@ -1,29 +1,24 @@
-// Transitions
-@mixin transitionOne {
-  transition: .25s ease-in-out;
-}
-@mixin transitionTwo {
-  transition: .5s ease-in-out;
-}
-
-// Media Queries
-@mixin media-lg-up {
-  @media (min-width: 992px) {
-    @content;
-  }
-}
-@mixin media-xl-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin media-xxl-up {
-  @media (min-width: 1600px) {
-    @content;
-  }
-}
-
 @function calculator($calculation) {
   $value: $calculation;
   @return #{$value};
+}
+
+// Transitions
+@mixin transition($duration) {
+  transition: $duration ease-in-out;
+}
+
+// Helpers
+@mixin resetList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }

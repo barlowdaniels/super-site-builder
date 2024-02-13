@@ -1,12 +1,14 @@
 <?php
 
-namespace SDSS;
+namespace SuperBuilder\Frontend;
 
-class Block
+use SuperBuilder\Helpers\Helper;
+
+class FlexibleContentBlock
 {
 
     public static function blockTitle(string $title = '', array $titleSettings = ['importance' => 'h3', 'colour' => 'primary']) {
-        Helpers::echoIfExists( $title, $titleSettings['importance'], 'block-title font-' . $titleSettings['colour'] );
+        Helper::echoIfExists( $title, $titleSettings['importance'], 'block-title font-' . $titleSettings['colour'] );
     }
 
     public static function blockButtons($buttonsRepeater) {
@@ -35,7 +37,7 @@ class Block
             $buttonGroup['hover'],
         ];
 
-        $button .= '<a class="theme-btn ' . rtrim(implode(' ', $buttonClasses)) . '" href="' . $buttonGroup['link'] . '" ' . Helpers::newTabCheck($buttonGroup['open_in_new_tab']) . '>';
+        $button .= '<a class="theme-btn ' . rtrim(implode(' ', $buttonClasses)) . '" href="' . $buttonGroup['link'] . '" ' . Helper::newTabCheck($buttonGroup['open_in_new_tab']) . '>';
         $button .= $buttonGroup['display_text'];
         $button .= '</a>';
 
@@ -65,7 +67,7 @@ class Block
             $location = $iteration == 0 ? 'left' : 'right';
             $fields = get_sub_field('split_' . $split . '_content')[$contentType . '_content'];
 
-            $output .= include __DIR__ . '/../templates/partials/split_content/' . $contentType . '.php';
+            $output .= include BASE_DIR . '/templates/partials/split_content/' . $contentType . '.php';
             $iteration++;
         }
 

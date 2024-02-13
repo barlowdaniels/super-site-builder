@@ -10,7 +10,7 @@
                             <div class="col col-12 col-md-6 col-xl-4">
                                 <div class="block-wrapper icon-link">
                                     <img class="image" src="<?= $imageLink['image']['sizes']['medium']; ?>"/>
-                                    <a href="<?= $imageLink['link'];?>" <?= SDSS\Helpers::newTabCheck($imageLink['open_in_new_tab']); ?>><?= $imageLink['display_text'];?></a>
+                                    <a href="<?= $imageLink['link'];?>" <?= \SuperBuilder\Helpers\Helper::newTabCheck($imageLink['open_in_new_tab']); ?>><?= $imageLink['display_text'];?></a>
                                 </div>
                             </div>
                         <?php } ?>

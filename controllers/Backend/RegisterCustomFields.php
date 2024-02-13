@@ -1,9 +1,9 @@
 <?php
 
-namespace SDSS;
+namespace SuperBuilder\Backend;
 
-class CustomFields {
-    public static function init() {
+class RegisterCustomFields {
+    public static function classInit() {
         add_action('acf/include_fields', [self::class, 'registerACFFields']);
         // DEV DEBUGGER
         add_action('admin_init', [self::class, 'superDebug']); 
@@ -18,6 +18,7 @@ class CustomFields {
             return;
         }
         include BASE_DIR . 'fields/settings.php';
+        include BASE_DIR . 'fields/header_settings.php';
         include BASE_DIR . 'fields/super_button.php';
         include BASE_DIR . 'fields/site_wide_content.php';
         include BASE_DIR . 'fields/page_builder.php';

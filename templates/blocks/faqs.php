@@ -1,9 +1,9 @@
-<div class="container-fluid faqs_block <?= SDSS\Block::blockClasses();?>">
+<div class="container-fluid faqs_block <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockClasses();?>">
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10 block-content">
             
-            <?php SDSS\Helpers::echoIfExists(get_sub_field('title'), 'h3'); ?>           
+            <?php \SuperBuilder\Helpers\Helper::echoIfExists(get_sub_field('title'), 'h3'); ?>           
             
             <div class="row faqs">
 				<?php 

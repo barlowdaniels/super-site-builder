@@ -1,6 +1,7 @@
 <?php
-use SDSS\Block;
-use SDSS\Helpers;
+
+use SuperBuilder\Helpers\Helpers;
+
 $content = get_sub_field('hero_content');
 ?>
 <div class="row">
@@ -10,12 +11,12 @@ $content = get_sub_field('hero_content');
                 <div class="block-wrapper">
                     <?php
                     // Title
-                    SDSS\Block::blockTitle($content['title'], $content['title_settings']);
+                    \SuperBuilder\Frontend\FlexibleContentBlock::blockTitle($content['title'], $content['title_settings']);
                     // Sub Text
-                    SDSS\Helpers::echoIfExists($content[ 'sub_text'], 'div', 'sub-text font-' . $content['sub_text_colour']);
+                    \SuperBuilder\Helpers\Helper::echoIfExists($content[ 'sub_text'], 'div', 'sub-text font-' . $content['sub_text_colour']);
                     // Buttons
                     if( $content['buttons'] ) {
-                        echo '<div class="block-buttons">' . SDSS\Block::blockButtons( $content['buttons'] ) . '</div>';
+                        echo '<div class="block-buttons">' . \SuperBuilder\Frontend\FlexibleContentBlock::blockButtons( $content['buttons'] ) . '</div>';
                     }
                     ?>
                 </div>
@@ -29,7 +30,7 @@ $content = get_sub_field('hero_content');
     <div class="container-fluid arrow">
         <div class="row">
             <div class="container">
-                <?= Helpers::getAsset('arrow-down.svg'); ?>
+                <?= SuperBuilder\Helpers\Helper::getAsset('arrow-down.svg'); ?>
             </div>
         </div>
     </div>

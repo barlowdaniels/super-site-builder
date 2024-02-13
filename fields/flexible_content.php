@@ -1,6 +1,5 @@
 <?php
 
-use SDSS\Helpers;
 function getEnabledBlocks() {
     $enabled = get_field('enabled_blocks', 'options');
     if(!$enabled) {

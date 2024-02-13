@@ -1,11 +1,11 @@
 <?php
 
-namespace SDSS;
+namespace SuperBuilder\Frontend;
 
 class SuperCodes
 {
 
-    public static function init() {
+    public static function classInit() {
         add_shortcode( 'post_address', [self::class, 'addressString'] );
         add_shortcode( 'contact_details', [self::class, 'contactDetails'] );
         add_shortcode( 'social_icons', [self::class, 'socialIcons'] );

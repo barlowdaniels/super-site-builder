@@ -9,15 +9,15 @@
                         <div class="block-wrapper <?= ($item['button']['link']) ? 'link' : ''; ?>">
                             <?php 
                             if($item['button']['link']) {
-                                echo '<a class="grid-link" href="' . $item['button']['link'] . '" ' . SDSS\Helpers::newTabCheck($item['button']['open_in_new_tab']) . '>';
+                                echo '<a class="grid-link" href="' . $item['button']['link'] . '" ' . \SuperBuilder\Helpers\Helper::newTabCheck($item['button']['open_in_new_tab']) . '>';
                             } 
                             
                             if($item['image']) {
                                 echo '<div class="image" style="background-image: url(' . $item['image']['sizes']['medium_large'] . ')"><div class="overlay"></div></div>';
                             }
-                            SDSS\Helpers::echoIfExists($item['title'], 'h4', 'title');
-                            SDSS\Helpers::echoIfExists($item['text'], 'p');
-                            echo SDSS\Block::blockButton($item['button']);
+                            \SuperBuilder\Helpers\Helper::echoIfExists($item['title'], 'h4', 'title');
+                            \SuperBuilder\Helpers\Helper::echoIfExists($item['text'], 'p');
+                            echo \SuperBuilder\Frontend\FlexibleContentBlock::blockButton($item['button']);
 
                             if($item['button']['link']) {
                                 echo '</a>';

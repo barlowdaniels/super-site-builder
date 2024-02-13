@@ -1,6 +1,6 @@
 <?php $contentWidth = get_sub_field('content_width'); ?>
 
-<div class="container-fluid split_content <?= SDSS\Block::blockClasses();?>">
+<div class="container-fluid split_content <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockClasses();?>">
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10 block-content">
@@ -10,7 +10,7 @@
             } ?>
 
             <div class="row <?= get_sub_field('split_alignment');?>">
-                <?php SDSS\Block::splitContent(); ?>
+                <?php \SuperBuilder\Frontend\FlexibleContentBlock::splitContent(); ?>
             </div>
 
             <?php if($contentWidth == 'slim') {

@@ -1,8 +1,8 @@
 // Properties & mixins
-@import 'display';
-@import 'mixins';
-@import 'button_settings';
-@import 'theme_btn';
+@import "display";
+@import "mixins";
+@import "button_settings";
+@import "theme_btn";
 
 // Libraries
 @import "bootstrap/bootstrap";
@@ -10,6 +10,7 @@
 
 // Super Site styles
 @import "config";
+@import "nav";
 @import "elements";
 @import "posts";
 @import "flexible_content";

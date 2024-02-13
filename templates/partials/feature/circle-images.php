@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-6 offset-4 wysiwyg">
                 <?= $content['wysiwyg']; ?>
-                <?= SDSS\Block::blockButton($content['button']); ?>
+                <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockButton($content['button']); ?>
             </div>
         </div>
     </div>

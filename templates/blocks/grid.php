@@ -1,3 +1,3 @@
-<div class="grid_block <?= SDSS\Block::blockClasses(); ?>">
-    <?php SDSS\Block::blockPartial(); ?>
+<div class="grid_block <?= \SuperBuilder\Frontend\FlexibleContentBlock::blockClasses(); ?>">
+    <?php \SuperBuilder\Frontend\FlexibleContentBlock::blockPartial(); ?>
 </div>

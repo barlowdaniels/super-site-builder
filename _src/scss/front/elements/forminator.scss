@@ -26,7 +26,7 @@
     font-weight: 600!important;
     background: $display_colours_secondary!important;
     color: $display_colours_primary!important;
-    @include transitionOne;
+    @include transition(.25s);
     &:hover,
     &:focus {
       background: transparent!important;

@@ -1,8 +1,8 @@
 <?php
 
-namespace SDSS;
+namespace SuperBuilder\Helpers;
 
-class Helpers
+class Helper
 {
 
     public static function isDev($userName = 'daniel') {
