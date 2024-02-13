@@ -1,0 +1,25 @@
+.acf-field .acf-label label {
+  font-size: 0.8rem !important;
+}
+.acf-field[data-name="section_name"] .acf-label, .acf-field[data-name="section_name"] .acf-label label {
+  display: none !important;
+}
+.acf-field[data-name="section_name"] .acf-input {
+  flex-grow: 1 !important;
+  padding: 0 !important;
+}
+.acf-field[data-name="section_name"] .acf-input input {
+  border: 0 !important;
+  background: transparent !important;
+  font-size: 1rem !important;
+  padding: 10px 15px !important;
+}
+.acf-field[data-name="section_name"] .acf-input input::placeholder {
+  content: "This";
+}
+.acf-field[data-name="section_name"], .acf-row.-collapsed > .acf-fields > .acf-field.-collapsed-target[data-name="section_name"] {
+  display: flex !important;
+  align-items: center !important;
+  background: #F9F9F9 !important;
+  padding: 0 !important;
+}
